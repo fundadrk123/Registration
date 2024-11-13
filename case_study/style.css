@@ -1,0 +1,196 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-image {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.ucak-resmi {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 30%;
+    animation: flyIn 2s ease-in-out forwards;
+}
+
+@keyframes flyIn {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.land-ucak {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 30%;
+    display: block;
+    opacity: 0;
+}
+
+.showLand {
+    opacity: 1;
+}
+
+.man-image {
+    position: absolute;
+    top: 55%;
+    left: 48%;
+    width: 5%;
+    display: none;
+    animation: fadeIn 1s forwards, resize 1s ease-in-out 1 forwards, bounce 1s ease-in-out 2, fadeOut 2s ease-in-out 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes resize {
+    0% {
+        top: 55%;
+        width: 5%;
+    }
+    100% {
+        top: 60%;
+        width: 8%;
+    }
+}
+
+@keyframes fadeOut {
+    0%,
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.king-image {
+    position: absolute;
+    top: 56%;
+    left: 49.5%;
+    width: 5%;
+    display: none;
+    opacity: 0;
+    transition: opacity 0s 0s;
+    animation: swingArms 1.5s ease-in-out infinite;
+}
+
+.showKing {
+    opacity: 1;
+}
+
+@keyframes swingArms {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.confetti,
+.coins {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 15%;
+    display: none;
+    opacity: 0;
+    transform: translateX(-50%);
+}
+
+.confetti {
+    animation: confettiAnimation 2s ease-in-out forwards;
+}
+
+.coins {
+    animation: coinAnimation 3s ease-in-out forwards;
+}
+
+@keyframes confettiAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(10px) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+    }
+}
+
+@keyframes coinAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(10px) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.8);
+    }
+}

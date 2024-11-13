@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #753C77;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-attachment: fixed;
+    background-color: #753C77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 380px;
+    background: #ddc1ff;
+    box-shadow: 0 0 20px 9px #0000001e;
+    border-radius: 35px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.record {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+    width: 100%;
+}
+
+.input-field,
+.date,
+.input-fiel {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid rgba(153, 153, 153, 0.705);
+    outline: none;
+    font-size: 14px;
+    box-shadow: 0 0 20px 9px #0000001e;
+}
+
+.input-field:focus,
+.date:focus,
+.input-fiel:focus {
+    border: 2px solid #9c346B;
+}
+
+.sumbit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #C49CFF, #9c346B);
+    border-radius: 35px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+    outline: none;
+    text-align: center;
+}
+
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border: 2px solid #9c346B;
+}
+
+.flatpickr-calendar {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 6px;
+    width: 100%;
+    z-index: 9999;
+}
+
+.flatpickr-day {
+    margin: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.flatpickr-day.selected {
+    background-color: #753a4d;
+    color: white;
+}
+
+.flatpickr-day.today {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.flatpickr-weekday {
+    font-weight: bold;
+    color: #753a4d;
+}
+
+.flatpickr-monthNav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.flatpickr-prev-month,
+.flatpickr-next-month {
+    color: #753a4d;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.flatpickr-prev-month:hover,
+.flatpickr-next-month:hover {
+    color: #5a2b3e;
+}
+
+@media (max-width: 480px) {
+    .form-box {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+    .record {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .input-field,
+    .date,
+    .input-fiel {
+        font-size: 14px;
+        padding: 12px 8px;
+    }
+    .sumbit-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+    #Register {
+        padding-left: 0;
+    }
+}

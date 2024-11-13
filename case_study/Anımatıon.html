@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Animasyon Sayfa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="images/walpaper.png" class="bg-image">
+            <img src="images/plane_fly.png" class="ucak-resmi" id="planeFly">
+            <img src="images/plane_land.png" class="land-ucak" id="planeLand">
+            <img src="images/man.png" class="man-image" id="manImage">
+            <img src="images/king.png" class="king-image" id="kingImage">
+            <img src="images/confetti.png" class="confetti" id="confettiImage">
+            <img src="images/coins.png" class="coins" id="coinsImage">
+        </div>
+        <div class="content">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('planeFly').addEventListener('animationend', function() {
+            document.getElementById('planeLand').classList.add('showLand');
+            document.getElementById('planeFly').remove();
+            document.getElementById('manImage').style.display = 'block';
+            document.getElementById('planeFly').remove();
+        });
+
+        document.getElementById('manImage').addEventListener('animationend', function() {
+            if (event.animationName === 'fadeOut') {
+                document.getElementById('kingImage').classList.add('showKing');
+                document.getElementById('manImage').remove();
+                document.getElementById('kingImage').style.display = 'block';
+                document.getElementById('confettiImage').style.display = 'block';
+                document.getElementById('coinsImage').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>
